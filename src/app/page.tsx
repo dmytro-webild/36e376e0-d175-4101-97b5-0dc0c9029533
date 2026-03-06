@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarLayoutFloatingInline from '@/components/navbar/NavbarLayoutFloatingInline';
@@ -9,7 +9,7 @@ import MetricCardTen from '@/components/sections/metrics/MetricCardTen';
 import TestimonialCardFifteen from '@/components/sections/testimonial/TestimonialCardFifteen';
 import FaqSplitText from '@/components/sections/faq/FaqSplitText';
 import FooterLogoReveal from '@/components/sections/footer/FooterLogoReveal';
-import { Award, Brain, Eye, Sparkles, Target, TrendingUp, Zap, User, LogOut, Settings } from 'lucide-react';
+import { Award, Brain, Eye, Sparkles, Target, TrendingUp, Zap, Users, Trophy, Globe } from 'lucide-react';
 
 export default function LandingPage() {
   return (
@@ -132,6 +132,30 @@ export default function LandingPage() {
         />
       </div>
 
+      <div id="leaderboard" data-section="leaderboard">
+        <MetricCardTen
+          title="Global Leaderboard"
+          description="Compete fairly with privacy-first leaderboards. Your rank is based on your metrics, but your personal data stays private."
+          tag="Competition"
+          tagIcon={Trophy}
+          tagAnimation="slide-up"
+          metrics={[
+            {
+              id: "1",              title: "Your Rank",              subtitle: "Monthly leaderboard position based on study consistency",              category: "Personal",              value: "#247"
+            },
+            {
+              id: "2",              title: "Study Streak",              subtitle: "Days of consecutive study sessions maintained",              category: "Achievement",              value: "24 Days"
+            },
+            {
+              id: "3",              title: "Global Community",              subtitle: "Anonymous students competing and studying together",              category: "Community",              value: "50K+"
+            }
+          ]}
+          textboxLayout="default"
+          useInvertedBackground={false}
+          animationType="slide-up"
+        />
+      </div>
+
       <div id="metrics" data-section="metrics">
         <MetricCardTen
           title="Proven Results"
@@ -175,6 +199,40 @@ export default function LandingPage() {
         />
       </div>
 
+      <div id="friends" data-section="friends">
+        <SplitAbout
+          title="Connect with Friends"
+          description="Invite friends to your study circle and grow together. Share achievements, compete on leaderboards, and stay motivated as a community—all while keeping your study sessions and personal data private."
+          tag="Social Features"
+          tagIcon={Users}
+          tagAnimation="slide-up"
+          bulletPoints={[
+            {
+              title: "Easy Invitations",              description: "Send study invitations to friends via email or shareable links. Build your private study group without exposing personal information.",              icon: Sparkles
+            },
+            {
+              title: "Friend Leaderboards",              description: "Compete with your study circle on private leaderboards. Motivate each other to reach goals while keeping personal metrics visible only to trusted friends.",              icon: Trophy
+            },
+            {
+              title: "Shared Goals",              description: "Create group study challenges and track collective progress. Celebrate wins together and build accountability through friendly competition.",              icon: Target
+            },
+            {
+              title: "Privacy-First Design",              description: "Your detailed study data is yours alone. Friends only see metrics you choose to share. All connections are opt-in and transparent.",              icon: Globe
+            }
+          ]}
+          buttons={[
+            { text: "Invite Friends", href: "#" }
+          ]}
+          buttonAnimation="slide-up"
+          imageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Aa2cXa2LmffEQPZIIbrTZKfaRM/a-minimalist-goal-setting-interface-show-1772816612158-754ad6ed.png?_wi=1"
+          imageAlt="Friend Study Circle"
+          mediaAnimation="slide-up"
+          imagePosition="right"
+          textboxLayout="default"
+          useInvertedBackground={false}
+        />
+      </div>
+
       <div id="faq" data-section="faq">
         <FaqSplitText
           sideTitle="Common Questions"
@@ -194,6 +252,15 @@ export default function LandingPage() {
             },
             {
               id: "5",              title: "Can I export my study data?",              content: "Yes! Premium users can export their study data as CSV or PDF reports. This is useful for tracking progress over semesters or sharing insights with teachers and tutors."
+            },
+            {
+              id: "6",              title: "How do I invite friends to StudyFlow?",              content: "You can invite friends directly from your profile using email or shareable invitation links. Your friends can accept invitations to join your private study circle at their own pace."
+            },
+            {
+              id: "7",              title: "Is the leaderboard competitive?",              content: "Our leaderboards are designed to motivate, not to pressure. You control what metrics are visible to your friends. Global leaderboards are anonymized, and friend leaderboards only show metrics you choose to share."
+            },
+            {
+              id: "8",              title: "How is my privacy protected?",              content: "StudyFlow uses privacy-first architecture. Your detailed study sessions and personal data are encrypted and never shared without explicit consent. Friends see only the metrics you choose to share."
             }
           ]}
           textPosition="left"
