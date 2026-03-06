@@ -19,7 +19,7 @@ export default function LandingPage() {
       borderRadius="rounded"
       contentWidth="mediumLarge"
       sizing="mediumLargeSizeMediumTitles"
-      background="blurBottom"
+      background="circleGradient"
       cardStyle="outline"
       primaryButtonStyle="shadow"
       secondaryButtonStyle="radial-glow"
@@ -43,7 +43,7 @@ export default function LandingPage() {
         <HeroSplitKpi
           title="Track Your Studies with Purpose"
           description="A clean, minimal study tracker designed for focus. Set goals, monitor progress, and build consistent study habits with beautiful simplicity inspired by Nothing and Apple."
-          background={{ variant: "blurBottom" }}
+          background={{ variant: "glowing-orb" }}
           kpis={[
             { value: "2.5x", label: "Better Retention" },
             { value: "87%", label: "Goal Completion" },
@@ -90,7 +90,7 @@ export default function LandingPage() {
             { text: "Learn More", href: "#features" }
           ]}
           buttonAnimation="slide-up"
-          imageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Aa2cXa2LmffEQPZIIbrTZKfaRM/a-minimalist-goal-setting-interface-show-1772816612158-754ad6ed.png?_wi=1"
+          imageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Aa2cXa2LmffEQPZIIbrTZKfaRM/a-minimalist-goal-setting-interface-show-1772816612158-754ad6ed.png"
           imageAlt="Study Goals Interface"
           mediaAnimation="slide-up"
           imagePosition="left"
@@ -108,16 +108,16 @@ export default function LandingPage() {
           tagAnimation="slide-up"
           features={[
             {
-              id: "1",              title: "Analytics Dashboard",              description: "Beautiful charts and graphs showing your study patterns, progress over time, and insights into your learning habits.",              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Aa2cXa2LmffEQPZIIbrTZKfaRM/a-beautiful-analytics-chart-showing-stud-1772816612258-201eaefb.png?_wi=1",              imageAlt: "Analytics Dashboard"
+              id: "1",              title: "Analytics Dashboard",              description: "Beautiful charts and graphs showing your study patterns, progress over time, and insights into your learning habits.",              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Aa2cXa2LmffEQPZIIbrTZKfaRM/a-beautiful-analytics-chart-showing-stud-1772816612258-201eaefb.png",              imageAlt: "Analytics Dashboard"
             },
             {
               id: "2",              title: "Focus Timer",              description: "Integrated Pomodoro timer with customizable sessions. Stay focused, track study sessions, and take mindful breaks.",              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Aa2cXa2LmffEQPZIIbrTZKfaRM/a-pomodoro-style-timer-interface-with-a--1772816612951-2d5d5e2e.png",              imageAlt: "Focus Timer"
             },
             {
-              id: "3",              title: "Goal Tracking",              description: "Set daily study goals, track completion rates, and celebrate milestones. Visual progress indicators keep you motivated.",              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Aa2cXa2LmffEQPZIIbrTZKfaRM/a-minimalist-goal-setting-interface-show-1772816612158-754ad6ed.png?_wi=2",              imageAlt: "Goal Tracking"
+              id: "3",              title: "Goal Tracking",              description: "Set daily study goals, track completion rates, and celebrate milestones. Visual progress indicators keep you motivated.",              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Aa2cXa2LmffEQPZIIbrTZKfaRM/a-minimalist-goal-setting-interface-show-1772816612158-754ad6ed.png",              imageAlt: "Goal Tracking"
             },
             {
-              id: "4",              title: "Subject Management",              description: "Organize your studies by subject. Track time spent on each topic and optimize your study schedule for better balance.",              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Aa2cXa2LmffEQPZIIbrTZKfaRM/a-beautiful-analytics-chart-showing-stud-1772816612258-201eaefb.png?_wi=2",              imageAlt: "Subject Management"
+              id: "4",              title: "Subject Management",              description: "Organize your studies by subject. Track time spent on each topic and optimize your study schedule for better balance.",              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3Aa2cXa2LmffEQPZIIbrTZKfaRM/a-beautiful-analytics-chart-showing-stud-1772816612258-201eaefb.png",              imageAlt: "Subject Management"
             }
           ]}
           gridVariant="four-items-2x2-equal-grid"
@@ -149,7 +149,7 @@ export default function LandingPage() {
               id: "3",              title: "4.8/5",              subtitle: "Average rating from verified student reviews",              category: "Rating",              value: "Highly Rated"
             }
           ]}
-          textboxLayout="centered"
+          textboxLayout="default"
           useInvertedBackground={false}
           animationType="slide-up"
         />
