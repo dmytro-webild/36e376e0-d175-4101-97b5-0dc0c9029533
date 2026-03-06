@@ -1,49 +1,20 @@
-import type { Metadata } from "next";
-import { Halant } from "next/font/google";
-import { Inter } from "next/font/google";
-import { Figtree } from "next/font/google";
-import "./globals.css";
-import { ServiceWrapper } from "@/components/ServiceWrapper";
-import Tag from "@/tag/Tag";
-
-const halant = Halant({
-  variable: "--font-halant",  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-});
-
-const inter = Inter({
-  variable: "--font-inter",  subsets: ["latin"],
-});
-
-const figtree = Figtree({
-  variable: "--font-figtree",  subsets: ["latin"],
-});
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "StudyFlow - Clean Study Tracker App",  description: "Track your studies with minimal design. Set goals, monitor progress, and build consistent study habits with beautiful simplicity.",  keywords: "study tracker, productivity app, goal tracking, student planner, focus timer",  robots: {
-    index: true,
-    follow: true,
-  },
-  openGraph: {
-    title: "StudyFlow - Clean Study Tracker App",    description: "Track your studies with minimal design. Set goals, monitor progress, and build consistent study habits with beautiful simplicity.",    type: "website",    siteName: "StudyFlow"},
-  twitter: {
-    card: "summary_large_image",    title: "StudyFlow - Clean Study Tracker App",    description: "Track your studies with minimal design. Set goals, monitor progress, and build consistent study habits with beautiful simplicity."},
+  title: 'StudyFlow - Track Your Studies with Purpose',
+  description: 'A clean, minimal study tracker designed for focus. Set goals, monitor progress, and build consistent study habits.',
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <ServiceWrapper>
-        <body
-          className={`${halant.variable} ${inter.variable} ${figtree.variable} antialiased`}
-        >
-          <Tag />
-          {children}
-        
+    <html lang="en">
+      <body>
+        {children}
+      
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -1411,7 +1382,6 @@ export default function RootLayout({
           }}
         />
       </body>
-      </ServiceWrapper>
     </html>
   );
 }

@@ -9,7 +9,7 @@ import MetricCardTen from '@/components/sections/metrics/MetricCardTen';
 import TestimonialCardFifteen from '@/components/sections/testimonial/TestimonialCardFifteen';
 import FaqSplitText from '@/components/sections/faq/FaqSplitText';
 import FooterLogoReveal from '@/components/sections/footer/FooterLogoReveal';
-import { Award, Brain, Eye, Sparkles, Target, TrendingUp, Zap } from 'lucide-react';
+import { Award, Brain, Eye, Sparkles, Target, TrendingUp, Zap, User, LogOut, Settings } from 'lucide-react';
 
 export default function LandingPage() {
   return (
@@ -32,7 +32,8 @@ export default function LandingPage() {
             { name: "Features", id: "features" },
             { name: "Benefits", id: "about" },
             { name: "Pricing", id: "metrics" },
-            { name: "FAQ", id: "faq" }
+            { name: "FAQ", id: "faq" },
+            { name: "Profile", id: "profile" }
           ]}
           button={{ text: "Start Tracking", href: "#contact" }}
           animateOnLoad={true}
